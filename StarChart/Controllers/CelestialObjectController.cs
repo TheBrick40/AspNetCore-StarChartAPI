@@ -17,16 +17,28 @@ namespace StarChart.Controllers
             _context = context;
         }
 
-        [HttpGet("{id:int}","GetById")]
+        [HttpGet("{id:int}")]
         public IActionResult GetById(int id)
         {
             try
             {
-                
+                return Ok();
             }
             catch (Exception)
             {
-                
+                return NotFound();
+            }
+        }
+        [HttpGet("{name}")]
+        public IActionResult GetByName(string Name)
+        {
+            try
+            {
+                return Ok();
+            }
+            catch (Exception)
+            {
+                return NotFound();
             }
         }
     }
